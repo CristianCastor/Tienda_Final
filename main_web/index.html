@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <script>
+          var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        } 
+        
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <form method="post" action="login.php">
+    
+    
+    <!-- login-->
+    
+<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+<div id="id01" class="modal">
+    
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+    
+    <div class="container">
+    <label for="uname"><b>Usuario</b></label>
+      <input type="text" placeholder="Inserte nombre de Usuario" name="txtusuario" required>
+
+      <label for="psw"><b>Contraseña</b></label>
+      <input type="password" placeholder="Inserte contraseña" name="txtpassword" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Recordarme
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">¿Olvido <a href="#">contraseña?</a></span>
+      
+    </div>
+  </form>
+</form>
+</div> 
+
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.jpg" alt="Logo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Main</a>
+        <a class="navegacion__enlace" href="nosotros.html">Informacion</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="carrito.php">Carrito (0)</a>
+        
+    </nav>
+
+      <!-- Slider-->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="img/fig1.jpg" style="width:30%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="img/fig2.jpg" style="width:30%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="img/fig3.jpg" style="width:30%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="img/fig4.jpg" style="width:30%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="img/fig11.jpg" style="width:30%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="img/fig8.jpg" style="width:30%">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img/fig1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ganyu">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/fig2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Tsuki">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/fig3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Keqing">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/fig4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Ryuko">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/fig11.jpg" style="width:100%" onclick="currentSlide(5)" alt="Violet">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/fig8.jpg" style="width:100%" onclick="currentSlide(6)" alt="Chiaki">
+      </div>
+    </div>
+  </div> 
+  </div> 
+    <main class="contenedor">
+        <h1>Figuras Trending</h1>
+
+        <div class="grid">
+            <div class="figura">
+                <div class="card">
+                <a href="ganyu.php">
+                    <img class="figura__imagen" src="img/fig1.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Ganyu(Escala 1/7)</h2>
+                    </div>
+                    </div>
+                </a>
+                
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="tsuki.php">
+                    <img class="figura__imagen" src="img/fig2.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Tsuki Hana(Escala 1/7)</h2>
+                        
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="keqing.php">
+                    <img class="figura__imagen" src="img/fig3.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Keqing(Escala 1/7)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="ryuko.php">
+                    <img class="figura__imagen" src="img/fig4.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Ryuko Matoi(Escala 1/7)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="kyojuro.php">
+                    <img class="figura__imagen" src="img/fig5.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>kyojuro Rengoku(MegaHouse)</h2>
+                        <h2>Kana Tsuyuri(MegaHouse)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="alina.php">
+                    <img class="figura__imagen" src="img/fig6.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Alina Gray(Escala 1/7)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="miku.php">
+                    <img class="figura__imagen" src="img/fig7.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Miku Nakano(Nendroid)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="chiaki.php">
+                    <img class="figura__imagen" src="img/fig8.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Chiaki Nanami(Escala 1/7)</h2>
+                    </div>
+                    </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="roxy.php">
+                    <img class="figura__imagen" src="img/fig9.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Roxy Migurdia(Escala 1/7)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="shinobu.php">
+                    <img class="figura__imagen" src="img/fig10.jpg" alt="imagen">
+                    <div class="figura_informacion">
+                        <h2>Shinobu Kocho(Escala 1/7)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="violet.php">
+                    <img class="figura__imagen" src="img/fig11.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Violet(Escala 1/7)</h2>
+                    </div>
+                </div>
+                </a>
+            </div>  <!--.producto-->
+            <div class="figura">
+                <div class="card">
+                <a href="kokoro.php">
+                    <img class="figura__imagen" src="img/fig12.jpg" alt="imagen">
+                    <div class="figura__informacion">
+                        <h2>Hata no Kokoro(Escala 1/7)</h2>
+                    </div>
+                    </div>
+                </main>
+
+                <footer class="footer">
+                    <p class="footer__texto">Cristian Castor Cedillo</p>
+                </footer>
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById('id01');
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                    </script>
+                    <script>
+                        function Valida(){
+                            alert('Ya entre');
+                            /*Validacion de coampos NO VACIOS*/
+                            
+                            if((document.miFormulario.email.value.lenght ==0)) {
+                                alert('Falta informacion');
+                                return false;
+                            }
+                        /*validacion email*/ 
+                        var ercorreo=/^[^@\s]+@[^@\.\s]+(\.[^@\-\s]+)+$/;
+                        if(!(ercorreo.test(document.miFormulario.email.value))) {
+                            alert('Contenido del email no es un correo electronico valido');
+                            return false;
+                        }
+                        /*Si no se detecto falla devuelve true*/ 
+                            return true;
+                        }
+                    </script>
+            </body>
+            </html>
